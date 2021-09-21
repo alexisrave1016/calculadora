@@ -35,10 +35,14 @@ class Display {
     }
 
     agregarNumero(numero){
-        if(numero=== '.' && this.valorActual.includes('.'))return
+        if(numero=== '.' && this.valorActual.includes('.')) return
         this.valorActual= this.valorActual.toString() + numero.toString();
+        if(this.valorActual>=0)
         this.imprimirValores();
+        
     }
+
+  
 
     imprimirValores(){
         this.displayValorActual.textContent= this.valorActual;
